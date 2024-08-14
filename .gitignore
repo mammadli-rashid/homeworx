@@ -1,0 +1,21 @@
+# IntelliJ folders & files #
+/.idea
+*.iml
+
+# Configuration files #
+services/config-service/src/main/resources/configurations
+
+# yml files #
+*.yml
+
+# Log files #
+*.log
+
+# Docker-compose file #
+docker-compose.yml
+
+# Kubernetes files #
+k8s
+
+# Media files #
+media

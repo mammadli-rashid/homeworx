@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="yourname">
+        <createCollection collectionName="media"/>
+        <addField collectionName="media" name="mediaId" type="long"/>
+        <addField collectionName="media" name="fileName" type="string"/>
+        <addField collectionName="media" name="fileType" type="string"/>
+        <addField collectionName="media" name="fileSize" type="long"/>
+        <addField collectionName="media" name="filePath" type="string"/>
+        <addField collectionName="media" name="uploadDate" type="datetime"/>
+        <addField collectionName="media" name="modifiedDate" type="datetime"/>
+        <addField collectionName="media" name="uploaderUserId" type="string"/>
+        <addField collectionName="media" name="activeStatus" type="int"/>
+    </changeSet>
+
+</databaseChangeLog>

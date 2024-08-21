@@ -4,21 +4,21 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.data.mongodb.config.EnableMongoAuditing;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Slf4j
 @EnableDiscoveryClient
-@EnableMongoAuditing
+@EnableJpaAuditing
 @SpringBootApplication
-public class MediaServiceApplication {
+public class StudentMicroservice {
 
     public static void main(String[] args) {
         try {
-            log.info("Starting MediaService application...");
-            SpringApplication.run(MediaServiceApplication.class, args);
-            log.info("MediaService application started successfully.");
+            log.info("Starting StudentService application...");
+            SpringApplication.run(StudentMicroservice.class, args);
+            log.info("StudentService application started successfully.");
         } catch (Exception e) {
-            log.error("Error occurred while starting MediaService application!", e);
+            log.error("Error occurred while starting StudentService application!", e);
             throw e;
         }
     }

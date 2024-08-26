@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Changeset for creating the Teacher collection -->
+    <changeSet id="1" author="your_name">
+        <!-- Create the collection (MongoDB is schema-less, so this step is optional) -->
+        <createCollection collectionName="teachers"/>
+
+        <!-- Create index on teacherId -->
+        <createIndex indexName="teacherId_index" collectionName="teachers">
+            <column name="teacherId"/>
+        </createIndex>
+
+        <!-- Create index on fullName -->
+        <createIndex indexName="fullName_index" collectionName="teachers">
+            <column name="fullName"/>
+        </createIndex>
+
+        <!-- Create index on birthDate -->
+        <createIndex indexName="birthDate_index" collectionName="teachers">
+            <column name="birthDate"/>
+        </createIndex>
+
+        <!-- Create index on contacts.EMAIL -->
+        <createIndex indexName="contacts_EMAIL_index" collectionName="teachers">
+            <column name="contacts.EMAIL"/>
+        </createIndex>
+
+        <!-- Create index on contacts.MOBILE -->
+        <createIndex indexName="contacts_MOBILE_index" collectionName="teachers">
+            <column name="contacts.MOBILE"/>
+        </createIndex>
+
+        <!-- Create index on teachingSubjects -->
+        <createIndex indexName="teachingSubjects_index" collectionName="teachers">
+            <column name="teachingSubjects"/>
+        </createIndex>
+
+        <!-- Create index on workHistory.workplace -->
+        <createIndex indexName="workHistory_workplace_index" collectionName="teachers">
+            <column name="workHistory.workplace"/>
+        </createIndex>
+
+        <!-- Create index on workHistory.occupation -->
+        <createIndex indexName="workHistory_occupation_index" collectionName="teachers">
+            <column name="workHistory.occupation"/>
+        </createIndex>
+
+        <!-- Create index on educationHistory.institution -->
+        <createIndex indexName="educationHistory_institution_index" collectionName="teachers">
+            <column name="educationHistory.institution"/>
+        </createIndex>
+
+        <!-- Create index on educationHistory.faculty -->
+        <createIndex indexName="educationHistory_faculty_index" collectionName="teachers">
+            <column name="educationHistory.faculty"/>
+        </createIndex>
+
+        <!-- Create index on educationHistory.specialization -->
+        <createIndex indexName="educationHistory_specialization_index" collectionName="teachers">
+            <column name="educationHistory.specialization"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>
